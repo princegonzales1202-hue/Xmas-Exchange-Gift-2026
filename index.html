@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Christmas Exchange Gift 2026</title>
+<style>
+:root{--red:#b92735;--deep:#641b28;--green:#145b42;--gold:#f5cf76;--cream:#fff8e9}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;color:#fff;background:radial-gradient(circle at 15% 10%,#28704d 0,transparent 28%),radial-gradient(circle at 90% 20%,#8d2633 0,transparent 30%),linear-gradient(135deg,#092f27,#123e32 55%,#501c29);min-height:100vh;overflow-x:hidden}
+.snow{position:fixed;inset:0;pointer-events:none;opacity:.55;background-image:radial-gradient(2px 2px at 20px 30px,#fff 98%,transparent),radial-gradient(2px 2px at 80px 120px,#fff 98%,transparent),radial-gradient(1.5px 1.5px at 150px 70px,#fff 98%,transparent);background-size:190px 160px;animation:snow 16s linear infinite}@keyframes snow{to{background-position:0 500px}}
+.wrap{width:min(960px,92%);margin:auto;padding:28px 0 55px}.top{text-align:center;padding:24px 12px 18px}.eyebrow{letter-spacing:4px;text-transform:uppercase;color:var(--gold);font:12px Arial,sans-serif}.top h1{font-size:clamp(2.4rem,8vw,5rem);line-height:.98;margin:14px 0;color:#fff5df;text-shadow:0 4px 0 #7d2530,0 8px 24px #0008}.top p{color:#e8dfc9;font:15px Arial,sans-serif}.garland{font-size:25px;letter-spacing:8px}
+.panel{background:linear-gradient(145deg,#fffaf0f5,#f4ead8f5);color:#24392f;border:1px solid #f4d88e;border-radius:24px;padding:clamp(20px,5vw,38px);box-shadow:0 20px 60px #0005;max-width:680px;margin:22px auto}
+.panel h2{margin:0 0 8px;color:var(--deep);font-size:1.8rem}.sub{font:14px/1.5 Arial,sans-serif;color:#637267;margin:0 0 22px}
+label{display:block;font: bold 12px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;margin:14px 0 7px;color:#395448}
+input{width:100%;padding:14px 15px;border:1px solid #d9cbb0;border-radius:12px;background:white;font:16px Arial,sans-serif;outline:none}input:focus{border-color:var(--green);box-shadow:0 0 0 3px #145b4220}
+button{border:0;border-radius:12px;padding:14px 18px;background:linear-gradient(120deg,#b92735,#8e1e2d);color:white;font:bold 14px Arial,sans-serif;cursor:pointer;box-shadow:0 5px 0 #641b28;width:100%;margin-top:16px}button:hover{filter:brightness(1.08)}button.secondary{background:linear-gradient(120deg,#1c7551,#14513d);box-shadow:0 5px 0 #0c392a}
+.notice{background:#fff2d6;border-left:4px solid #d8a83e;padding:12px 14px;border-radius:8px;font:13px/1.5 Arial,sans-serif;color:#69532c;margin-top:18px}
+.footer{text-align:center;color:#e8dfc9;font:12px Arial,sans-serif;margin-top:25px}.hidden{display:none}.tag{display:inline-block;background:#e5f0e7;color:#145b42;padding:6px 10px;border-radius:20px;font:11px Arial,sans-serif;letter-spacing:1px}
+.gift{font-size:48px;margin:10px 0}.tree{position:fixed;bottom:-25px;opacity:.14;font-size:110px;pointer-events:none}.left{left:8px}.right{right:8px}
+@media(max-width:500px){.wrap{padding-top:12px}.panel{border-radius:18px}.tree{font-size:65px}}
+</style>
+</head>
+<body>
+<div class="snow"></div><div class="tree left">🎄</div><div class="tree right">🎄</div>
+<main class="wrap">
+<header class="top">
+<div class="garland">✦ ❄ ✦ ❄ ✦</div>
+<div class="eyebrow">A little magic, a lot of memories</div>
+<h1>Christmas<br>Exchange Gift</h1>
+<p>Make a wish, share the joy, and let the Christmas magic begin.</p>
+<div class="garland">🎁 ✨ 🎄 ✨ 🎁</div>
+</header>
+<section class="panel" id="welcome">
+<span class="tag">CHRISTMAS 2026</span>
+<div class="gift">🎁</div>
+<h2>Welcome, gift-giver!</h2>
+<p class="sub">Your festive exchange-gift hub starts here. Sign in as the organizer or open your personal participant link.</p>
+<label for="adminEmail">Organizer email</label><input id="adminEmail" type="email" placeholder="you@example.com" autocomplete="username">
+<label for="adminPass">Password</label><input id="adminPass" type="password" placeholder="Your secure password" autocomplete="current-password">
+<button id="loginBtn">🎄 Organizer Sign In</button>
+<div class="notice"><b>Setup note:</b> This is the Christmas-themed starter page. Secure login, online participant storage, and private draw links must be connected to a backend before publishing. Do not use a real password on this preview.</div>
+</section>
+<section class="panel hidden" id="participant">
+<span class="tag">YOUR SECRET DRAW</span><div class="gift">🎅</div><h2>Your Christmas surprise</h2>
+<p class="sub">This page is reserved for the participant's private result.</p>
+<p id="participantResult">Your personal draw will appear here after the secure backend is connected.</p>
+</section>
+<footer class="footer">Made with ❄ and Christmas cheer · 2026</footer>
+</main>
+<script>
+const params=new URLSearchParams(location.search);
+if(params.has('gift')){document.getElementById('welcome').classList.add('hidden');document.getElementById('participant').classList.remove('hidden')}
+document.getElementById('loginBtn').addEventListener('click',()=>alert('Backend setup is not connected yet. This preview does not collect or store your login details.'));
+</script>
+</body></html>
